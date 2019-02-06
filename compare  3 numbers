@@ -1,0 +1,33 @@
+#include<stdio.h>
+int input(int *a,int *b,int *c)
+{
+   printf("enter the 3 numbers");
+   scanf("%d%d%d",a,b,c);
+}
+int comp3nums(int a,int b,int c)
+{
+   int min;
+   if(a<b && a<c)
+   {
+    if(a<b)
+     min=a;
+    else
+    min=b;
+   }
+   else if(b<c)
+     min=b;
+   else
+     min=c;
+   return min;
+}
+int output(int n)
+{
+    printf("the smaller number is:%d",n);
+}
+int main()
+{
+    int x,y,z,min;
+    input(&x,&y,&z);
+    min=comp3nums(x,y,z);
+    output(min);
+}
